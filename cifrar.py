@@ -16,7 +16,7 @@ def tratarTexto(frase):
     frase = "".join(frase)
     return frase
 
-def emcrypter(chave, frase):
+def cifrar(chave, frase):
     saida = list(frase)
     for x in range(len(frase)):
         if saida[x] == " ":
@@ -40,7 +40,7 @@ def __init__():
     data = removerBarra(sys.argv[1])    
     frase = tratarTexto(carregarTexto(sys.argv[2]))
     chave = formarChave(data,frase)
-    saida = emcrypter(chave, frase)
+    saida = cifrar(chave, frase)
     salvar(saida, sys.argv[3])
 __init__();
 
