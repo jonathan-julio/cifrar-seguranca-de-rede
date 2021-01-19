@@ -1,7 +1,7 @@
 import sys
 from utils import (carregarTexto, formarChave,removerBarra)
 
-def descrypter(chave, frase):
+def decifrar(chave, frase):
     saida = list(frase)
     for x in range(len(frase)):
         if saida[x] == " ":
@@ -20,7 +20,6 @@ def __init__():
     data = removerBarra(sys.argv[1])
     frase = carregarTexto(sys.argv[2])
     chave = formarChave(data,frase)
-    saida = descrypter(chave, frase)
+    saida = decifrar(chave, frase)
     print(saida)
 __init__();
-
